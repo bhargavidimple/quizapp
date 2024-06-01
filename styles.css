@@ -1,0 +1,63 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #eaeaea, #ffffff); /* Gradient background */
+}
+
+.container {
+    background-color: #fff; /* White background for the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+    width: 600px; /* Increase the width as needed */
+    margin: 50px auto; /* Center the container horizontally */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+h1 {
+    color: #333; /* Dark gray heading color */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* Add space below labels */
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Add space below inputs */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+
+.answers-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    text-align: left; /* Align quiz options to the left */
+}
+
+.answers-list li {
+    margin-bottom: 10px; /* Add space between answer options */
+}
+
+.answers-list label {
+    display: block; /* Make labels block-level for easier clicking */
+}

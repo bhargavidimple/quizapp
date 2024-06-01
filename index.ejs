@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Trivia  Quiz</h1>
+        <form action="/trivia" method="POST">
+            <label for="amount">Number of Questions:</label>
+            <input type="number" name="amount" value="9" min="1" max="20">
+            <br>
+            <label for="category">Category</label>
+            <select name="category">
+                <option value="20">Mythology</option>
+                <option value="21">Sport</option>
+                <option value="22">History</option>
+                <option value="23">Art</option>
+            </select>
+            <br>
+            <label for="difficulty">Difficulty:</label>
+            <select name="difficulty" >
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <br>
+            <button type="submit">Start Quiz</button>
+
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
