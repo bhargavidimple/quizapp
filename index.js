@@ -31,7 +31,10 @@ const ejs = require('ejs');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+// app.use(express.static('public'));
+// Serve static files from the root directory
+app.use(express.static('.'));
+
 app.use(express.urlencoded({ extended: false }));
 
 let questionsData; // Variable to store fetched questions
@@ -40,7 +43,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.post('/trivia', async (req, res) => {
+app.post('trivia', async (req, res) => {
     const { amount, category, difficulty } = req.body;
     const response = await axios.get(`https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`);
     questionsData = response.data.results;
@@ -72,7 +75,7 @@ app.post('/submit', (req, res) => {
     res.redirect(`/score?score=${score}`);
 });
 
-app.get('/score', (req, res) => {
+app.get('score', (req, res) => {
     const score = req.query.score;
     res.render('score', { score: score });
 });
